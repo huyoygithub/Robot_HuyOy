@@ -1,0 +1,17 @@
+--cpu=Cortex-M4.fp.sp
+".\misc.o"
+".\stm32f4xx_gpio.o"
+".\stm32f4xx_rcc.o"
+".\startup_stm32f40_41xxx.o"
+".\stm32f4xx_usart.o"
+".\stm32f4xx_adc.o"
+".\stm32f4xx_dma.o"
+".\stm32f4xx_tim.o"
+".\main.o"
+".\stm32f4xx_it.o"
+".\system_stm32f4xx.o"
+".\lcd.o"
+--library_type=microlib --strict --scatter ".\manualRobot.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\manualRobot.map" -o .\manualRobot.axf
